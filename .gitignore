@@ -1,0 +1,15 @@
+# Ignore a pasta target
+
+target/
+
+# Ignore a pasta .settings
+
+.settings/
+
+# Ignore o arquivo .classpath
+
+.classpath
+
+# Ignore o arquivo .project
+
+.project

@@ -1,0 +1,1501 @@
+/*Procuratio Login*/
+
+/*Fundo tela*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #d3d3d3;
+  color: white;
+  border-radius: 10px;
+}
+
+/*Para as informações Ficarem uma do lado da outra - HOME*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #2e747d;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+header .simboloP {
+  height: 60px;
+  width: 60px;
+  background-color: #0f1f25;
+  color: #2e747d;
+  border-radius: 100%;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Raleway";
+  text-align: center;
+}
+
+header .logo {
+  font-size: 32px;
+  color: #0a1d2f;
+  font-weight: 700;
+  font-family: "Raleway";
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 13px;
+}
+
+a.opcoes {
+  text-decoration: none;
+  color: #17303a;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+a.opcoes:hover,
+a.opcoes.selecionado {
+  color: #ffffff !important;
+}
+
+.breadcrumbs {
+  padding-left: 32px;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  color: #ffffff;
+  background-color: #41585b;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.btn {
+  float: right;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #0a83c1;
+  border: 2px solid #0a83c1;
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  min-width: 163px;
+}
+
+.btn.btn-excluir {
+  background-color: transparent !important;
+  border: none;
+  border-radius: none;
+  color: #de1515;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.btn.btn-empty {
+  background-color: transparent;
+  color: #0a83c1;
+}
+
+.btn.btn-deletar {
+  background-color: #de1515;
+  border-color: #de1515;
+  color: #ffffff;
+}
+
+.btn.btn-editar {
+  background-color: transparent !important;
+  border-color: #000000;
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.btn.btn-cadastrar {
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background-color: #2e747d;
+}
+
+.btn-header-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.banner {
+  position: relative;
+  height: 675px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.banner-content {
+  margin-right: 37px;
+}
+
+.banner::after {
+  content: "";
+  background-image: linear-gradient(
+      270.51deg,
+      rgba(18, 69, 89, 0.5) 45.19%,
+      rgba(0, 0, 0, 0.5) 71%,
+      rgba(0, 0, 0, 0) 97.93%
+    ),
+    url("Imagens/banner.png");
+  backdrop-filter: blur(2px);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+  z-index: -1;
+}
+
+.banner .coluna-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.banner .coluna-1 > div > h1 {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+}
+div.banner-caption {
+  font-size: 20px;
+  line-height: 100%;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.cima h1 {
+  margin-left: 70%;
+  margin-top: 5%;
+  width: 555px;
+  top: 289px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.cima a {
+  margin-left: 50%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.btn.saibamais {
+  color: #ffffff;
+  border-color: #264246;
+  background: #264246;
+}
+
+.quem-somos {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 32px;
+  gap: 94px;
+  color: #17303a;
+}
+
+.quem-somos .coluna-1 > img {
+  max-width: 422px;
+  height: auto;
+}
+
+.quem-somos .coluna-2 > h1 {
+  margin-top: 46px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.quem-somos .coluna-2 .texto > p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #333333;
+}
+
+.meioSimboloLogo {
+  display: flex;
+}
+
+.quem-somos .simboloP {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #0f1f25;
+  color: #d3d3d3;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Raleway";
+  font-style: normal;
+  text-align: center;
+}
+
+.quem-somos .logo {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.mapa {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  overflow: hidden;
+  padding-bottom: 15%;
+  position: relative;
+  height: 0;
+}
+
+.mapa iframe {
+  width: 259px;
+  height: 193px;
+  border: none;
+}
+
+.footer1 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0f1f25;
+  text-align: center;
+  padding: 10px;
+}
+
+footer .baixo {
+  display: flex;
+  background-color: #17303a;
+  color: #ffffff;
+  padding: 58px;
+  gap: 13px;
+}
+
+footer .baixo .coluna-1 {
+  margin-right: 62px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .baixo .coluna-1 > h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  margin-bottom: 8px;
+}
+
+footer .baixo .coluna-1 > a {
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  color: #ffffff;
+  margin-top: 8 px;
+  text-decoration: none;
+}
+
+footer .copyright {
+  background-color: #0f1f25;
+  padding: 16px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/*TELA DE LOGIN*/
+
+.containerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: calc(100vh - 46px);
+  color: #0f1f25;
+}
+
+.containerLogin::after {
+  content: "";
+  background-image: url("Imagens/custos-logísticos-de-transporte.png");
+  backdrop-filter: blur(2px);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+  z-index: -1;
+}
+
+.login-link {
+  font-family: "Roboto";
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #356f8d;
+}
+
+.modal-card {
+  margin: auto;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  color: #000000;
+}
+
+/* Modal Content/Box */
+.modal .modal-content {
+  height: auto;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  border-radius: 15px;
+}
+
+.modal .modal-content .modal-container {
+  padding: 20px;
+}
+
+.modal-container.edit-container {
+  padding: 40px 97px !important;
+}
+
+.modal-content.edit-modal {
+  width: 90%;
+  margin: 2% auto;
+}
+
+.modal-content .modal-header {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: #ffffff;
+  background-color: #333333;
+  padding: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 13px;
+}
+
+.containerSimboloPeLogo {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.containerSimboloPeLogo .logo {
+  font-family: "Raleway";
+  font-size: 25px;
+  color: #0a1d2f;
+  flex-grow: 0;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.containerSimboloPeLogo .simboloP {
+  padding: 5px;
+  background: #0f1f25;
+  color: #ffffff;
+  border-radius: 100%;
+  font-size: 30px;
+  height: 40px;
+  width: 40px;
+  font-weight: bold;
+  font-family: "Raleway";
+  font-style: normal;
+  text-align: center;
+}
+
+/* Deixar Nomes Usuário e Senha ao lado da caixa de digitação */
+.col-25 {
+  font-size: 16px;
+}
+
+/*Centralizar os nomes Usuário e Senha*/
+label {
+  padding: 12px 0px 0px 0px;
+  display: inline-block;
+}
+
+/*Configurações Caixa Login, tamanho da caixa de texto*/
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(25, 14, 14);
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/*TELA CADASTRAR-SE*/
+
+.containerSimboloPeLogo2 {
+  display: flex;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+
+  position: absolute;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100px;
+
+  left: 0;
+  top: 30px;
+}
+
+.containerSimboloPeLogo2 .logo {
+  font-family: "Raleway";
+  font-size: 25px;
+  color: #0a1d2f;
+  flex-grow: 0;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.containerSimboloPeLogo2 .simboloP {
+  padding: 5px;
+  background: #0f1f25;
+  color: #ffffff;
+  border-radius: 100%;
+  font-size: 30px;
+  height: 40px;
+  width: 40px;
+  font-weight: bold;
+  font-family: "Raleway";
+  font-style: normal;
+  text-align: center;
+}
+
+.containerBemVindoCadastrar {
+  height: 100vh;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+
+  position: absolute;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 530px;
+
+  top: 60px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.containerBemVindoCadastrar .btn-cadastrar {
+  float: right;
+  font-size: 16px;
+  background: #0a83c1;
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+}
+
+/*TELA OPÇÕES*/
+
+.container-opcoes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 286px);
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.painel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #17303a;
+  width: 282px;
+  height: 369px;
+
+  background: #ffffff;
+
+  border: 1px solid #0f1f25;
+  border-radius: 20px;
+  padding: 35px;
+}
+
+.painel-icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d6e3e4;
+  height: 110px;
+  width: 110px;
+  border-radius: 100px;
+  margin-bottom: 9px;
+}
+.painel-icone > img {
+  height: 60px;
+  width: 60px;
+}
+
+.painel-container h3 {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.painel-container p {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  margin-bottom: 40px;
+}
+
+/*CROUD EMPRESAS*/
+
+.caminhoCroudEmpresas {
+  width: 100vw;
+  background: #41585B;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+.container-content-list {
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.modal-empresa {
+  color: #333333;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+}
+
+.modal-empresa h3 {
+  color: #17303a;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.modal-empresa .modal-empresa-content {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #2e747d;
+}
+
+.modal-empresa .modal-empresa-content p {
+  margin-bottom: 15px;
+}
+
+.buscar {
+  justify-self: space-between;
+  align-items: space-between;
+  display: flex;
+  gap: 13px;
+  border-radius: 20px;
+  background-color: #d3d3d3;
+  width: 100%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  color: #000000;
+}
+
+.buscar-select {
+  width: 484px;
+}
+.row .buscar-select {
+  width: unset;
+  max-width: 484px;
+  margin-top: -12px;
+}
+
+.buscar-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buscar-select > label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.containerEmpresaSelecionada {
+  border-radius: 20px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+
+  position: absolute;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 745px;
+  height: 250px;
+
+  top: 260px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.containerEmpresaSelecionada h3 {
+  color: #17303a;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.containerEmpresaSelecionada p {
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.btn-excluirEmpresa {
+  margin-left: 30%;
+  margin-top: 5px;
+  color: #de1515;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  line-height: 100%;
+}
+
+.btn-editarCadastro {
+  margin-top: 5px;
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  border-color: #000000;
+  cursor: pointer;
+  line-height: 100%;
+}
+
+/*Confirmação de exclusão de Empresa*/
+
+.confirmarExclusãoEmpres {
+  border-radius: 20px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+
+  position: absolute;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 745px;
+  height: 200px;
+
+  top: 500px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.confirmarExclusãoEmpresa h3 {
+  color: #17303a;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.confirmarExclusãoEmpresa p {
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.confirmarExclusãoEmpresa .btn-cancelar {
+  margin-left: 30%;
+  margin-top: 5px;
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  border-color: #000000;
+  cursor: pointer;
+  line-height: 100%;
+}
+
+.confirmarExclusãoEmpresa .btn-simExcluir {
+  margin-top: 5px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #e82929;
+  cursor: pointer;
+  line-height: 100%;
+  border-radius: 8px;
+}
+
+/*CADASTRO DE EMPRESA */
+
+.cadastroEmpresaCard {
+  margin: 40px 108px 0 108px;
+}
+
+.cadastroEmpresaCardBody {
+  margin-bottom: 3%;
+  padding: 20px 94px 20px;
+  background-color: white;
+  color:#333333;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 0 0 20px 20px;
+}
+
+.form-body {
+  color: #333333;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 62px;
+}
+
+.form-body .row {
+  display: flex;
+  flex: none;
+  flex-grow: 0;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hide {
+  display: none;
+}
+
+.btn-img {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.form-body .modal-actions {
+  margin-top: 67px;
+  width: 100%;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.responsive-table {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #356f8d;
+  list-style-type: none;
+}
+
+.responsive-table li {
+  border-radius: 8px;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: #e0e3ec;
+}
+
+.title-row {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: #0f1f25;
+  width: 100%;
+  border: solid #333333;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  padding-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.arrow {
+  border: solid #356f8d;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.responsive-table .col-1 {
+  flex-basis: 20%;
+}
+.responsive-table .col-2 {
+  flex-basis: 40%;
+}
+.responsive-table .col-3 {
+  flex-basis: 25%;
+}
+.responsive-table .col-4 {
+  flex-basis: 15%;
+}
+
+.cadastroEmpresaCardField {
+  flex: 0 1 45%;
+}
+
+.cadastroEmpresaCardField.sm {
+  flex: 0 1 10%;
+}
+
+.cadastroEmpresaCardField.md {
+  flex: 0 1 34%;
+}
+
+@media only screen and (max-width: 720px) {
+  .form-body .row {
+    flex-direction: column;
+  }
+  .cadastroEmpresaCardField {
+    flex: 0 1 45%;
+  }
+}
+
+.cadastroEmpresaCardAddress {
+  max-width: 500px;
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cadastroEmpresaCardButtons {
+  flex: 0 0 100%;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.cadastroEmpresaCardButtons .btn-cadastrarEmpresa {
+  font-size: 16px;
+  background: #0a83c1;
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 12px 24px;
+}
+
+.cadastroEmpresaCardButtons .btn-cancelar {
+  font-size: 16px;
+  background: #ffffff;
+  color: #356f8d;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border-color: #356f8d;
+  padding: 12px 24px;
+  margin-left: auto;
+}
+
+.novoCadastroEmpresa {
+  width: 100%;
+  height: 55px;
+  background: #333333;
+  border-radius: 20px 20px 0px 0px;
+  padding-left: 94px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.opcoesCadastroEmpresaEsquerda {
+  margin-left: 50px;
+  padding: 20px;
+  position: absolute;
+  top: 50px;
+  width: 39.5vw;
+  height: 480px;
+  left: 108px;
+  top: 180px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-top: 0;
+  border-bottom: 20px;
+  border-right: none;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #333333;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.opcoesCadastroEmpresaEsquerda .opcoesCadastroEmpresaCepBairro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.opcoesCadastroEmpresaDireita {
+  margin-left: 50px;
+  padding: 20px;
+  position: absolute;
+  top: 50px;
+  width: 39.5vw;
+  height: 480px;
+  left: 46.3%;
+  top: 180px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+  border-top: 0;
+  border-bottom: 20px;
+  border-left: none;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #333333;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.opcoesCadastroEmpresaDireita .opcoesCadastroEmpresaNumeroComplemento {
+  display: flex;
+  justify-content: space-between;
+}
+
+.opcoesCadastroEmpresaDireita .opcoesCadastroEmpresaUfCidade {
+  display: flex;
+  justify-content: space-between;
+}
+
+.opcoesCadastroEmpresaDireita .btn-cadastrarEmpresa {
+  float: right;
+  font-size: 16px;
+  background: #0a83c1;
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 12px 24px;
+}
+
+.opcoesCadastroEmpresaDireita .btn-cancelar {
+  float: right;
+  font-size: 16px;
+  background: #ffffff;
+  color: #356f8d;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border-color: #356f8d;
+  padding: 12px 24px;
+}
+
+/*EDITAR DADOS EMPRESA*/
+
+.editarDadosEmpresa {
+  padding: 20px;
+  margin-left: 50px;
+  position: absolute;
+  width: 78.8vw;
+  height: 55px;
+  left: 108px;
+  top: 130px;
+  background: #333333;
+  border-radius: 20px 20px 0px 0px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.opcoesCadastroEmpresaDireita .btn-editarEmpresa {
+  float: right;
+  font-size: 16px;
+  background: #0a83c1;
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 12px 24px;
+}
+
+/*CROUD COLABORADOR*/
+
+.caminhoCroudColaborador {
+  position: absolute;
+  width: 100vw;
+  left: 0px;
+  background: #41585b;
+  padding: 10px;
+}
+
+.buscarColaborador {
+  margin: auto;
+  border-radius: 20px;
+  background-color: #d3d3d3;
+
+  position: center;
+  width: 700px;
+
+  top: 150px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  color: #000000;
+}
+
+.buscarColaborador .btn-novoColaborador {
+  margin-top: 5px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  background: #0a83c1;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.containerColaboradorSelecionado {
+  border-radius: 20px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+
+  position: absolute;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 745px;
+  height: 250px;
+
+  top: 260px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.containerColaboradorSelecionado h3 {
+  color: #17303a;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.containerColaboradorSelecionado p {
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.btn-excluirColaborador {
+  margin-left: 30%;
+  margin-top: 5px;
+  color: #de1515;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  line-height: 100%;
+}
+
+.btn-editarCadastro {
+  margin-top: 5px;
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  border-color: #000000;
+  cursor: pointer;
+  line-height: 100%;
+}
+
+/*Confirmação de exclusão de Empresa*/
+
+.confirmarExclusãoColaborador {
+  border-radius: 20px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+
+  position: absolute;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 745px;
+  height: 200px;
+
+  top: 500px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.confirmarExclusãoColaborador h3 {
+  color: #17303a;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.confirmarExclusãoColaborador p {
+  color: #333333;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.confirmarExclusãoColaborador .btn-cancelar {
+  margin-left: 30%;
+  margin-top: 5px;
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  border-color: #000000;
+  cursor: pointer;
+  line-height: 100%;
+}
+
+.confirmarExclusãoColaborador .btn-simExcluir {
+  margin-top: 5px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #e82929;
+  cursor: pointer;
+  line-height: 100%;
+  border-radius: 8px;
+}
+
+/*CROUD FUNÇÕES*/
+
+.caminhoCroudFuncoes {
+  position: absolute;
+  width: 100vw;
+  left: 0px;
+  background: #41585b;
+  padding: 10px;
+}
+
+.buscarFuncao {
+  margin: auto;
+  border-radius: 20px;
+  background-color: #d3d3d3;
+
+  position: center;
+  width: 700px;
+
+  top: 150px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  color: #000000;
+}
+
+.buscarFuncao2 {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #d3d3d3;
+
+  position: center;
+  width: 700px;
+
+  top: 150px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  color: #000000;
+}
+
+.buscarFuncao2 .btn-novaFuncao {
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  width: 150px;
+  height: 40px;
+  background: #0a83c1;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/*CADASTRO DE FUNÇÃO*/
+
+.nomeDaFuncao {
+  color: #000000;
+  background-color: #ffffff;
+  padding-bottom: 30px;
+}
+
+.nomeDaFuncao h2 {
+  margin-left: 90px;
+}
+
+.nomeDaFuncao p {
+  margin-left: 90px;
+}
+
+
